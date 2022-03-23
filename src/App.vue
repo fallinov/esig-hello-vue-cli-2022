@@ -1,16 +1,22 @@
 <template>
   <div id="app">
-    <strong>toto</strong>
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/produits">Produits</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
-    <router-view />
+    <div id="contenu">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <style lang="scss">
+#contenu {
+  border: 2px solid red;
+  padding: 20px;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
