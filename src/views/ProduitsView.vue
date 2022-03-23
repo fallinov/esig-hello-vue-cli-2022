@@ -5,14 +5,15 @@
       <li>{{ nom }}</li>
       <li>{{ prenom }}</li>
     </ul>
-    <BoutonMagique couleur="red" />
-    <BoutonMagique couleur="yellow" />
-    <BoutonMagique couleur="blue">Bonjour</BoutonMagique>
+    <BoutonMagique couleur="red">Bonjour</BoutonMagique>
+    <BoutonMagique>Adieu</BoutonMagique>
+    <BoutonMagique couleur="blue">Tcho</BoutonMagique>
   </div>
 </template>
 
 <script>
 /* @ représente le dossier src/ de l'app */
+
 import BoutonMagique from "@/components/BoutonMagique";
 export default {
   name: "ProduitsView",
