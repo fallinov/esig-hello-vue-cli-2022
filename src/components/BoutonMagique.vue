@@ -1,5 +1,5 @@
 <template>
-  <button :style="'background-color:' + couleur">
+  <button :style="'background-color:' + couleur" :class="{ actif: actif }">
     <slot>Magique</slot>
   </button>
 </template>
@@ -13,6 +13,11 @@ export default {
       default: "green",
     },
   },
+  data() {
+    return {
+      actif: true,
+    };
+  },
 };
 </script>
 
@@ -23,5 +28,9 @@ button {
   font-weight: bold;
   border-radius: 10px;
   padding: 2px 4px;
+}
+
+button.actif {
+  border: 4px solid black;
 }
 </style>
