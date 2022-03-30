@@ -1,5 +1,9 @@
 <template>
-  <button :style="'background-color:' + couleur" :class="{ actif: actif }">
+  <button
+    :style="'background-color:' + couleur + '; color:' + couleurTxt"
+    :class="{ actif: actif }"
+    @click="$emit('coucou', 'Pauline')"
+  >
     <slot>Magique</slot>
   </button>
 </template>
@@ -7,12 +11,7 @@
 <script>
 export default {
   name: "BoutonMagique",
-  props: {
-    couleur: {
-      type: String,
-      default: "green",
-    },
-  },
+  props: ["couleur", "couleurTxt"],
   data() {
     return {
       actif: true,

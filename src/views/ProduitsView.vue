@@ -6,8 +6,8 @@
       <li>{{ prenom }}</li>
     </ul>
     <BoutonMagique couleur="red">Bonjour</BoutonMagique>
-    <BoutonMagique>Adieu</BoutonMagique>
-    <BoutonMagique couleur="blue">Tcho</BoutonMagique>
+    <BoutonMagique @coucou="bonjour">Adieu</BoutonMagique>
+    <BoutonMagique couleur="blue" couleur-txt="red">Tcho</BoutonMagique>
   </div>
 </template>
 
@@ -23,6 +23,11 @@ export default {
       nom: "Fallet",
       prenom: "Steve",
     };
+  },
+  methods: {
+    bonjour(txt) {
+      this.nom = txt;
+    },
   },
 };
 </script>
